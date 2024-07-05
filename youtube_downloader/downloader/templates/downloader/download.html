@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Video</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light grey background */
+            padding: 20px; /* Add some padding */
+        }
+        .container {
+            max-width: 600px; /* Set maximum width for content */
+            margin: auto; /* Center content horizontally */
+            margin-top: 50px; /* Add some top margin */
+            background-color: #fff; /* White background for content */
+            padding: 30px; /* Add padding inside container */
+            border-radius: 10px; /* Add rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+        h1 {
+            color: #007bff; /* Blue header */
+            text-align: center; /* Center align header */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center mb-4">Download Video</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="url">YouTube URL:</label>
+                        <input type="text" class="form-control" id="url" name="url" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quality">Quality:</label>
+                        <select class="form-control" id="quality" name="quality" required>
+                            <option value="240p">240p</option>
+                            <option value="360p">360p</option>
+                            <option value="480p">480p</option>
+                            <option value="720p">720p</option>
+                            <option value="1080p">1080p</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Download</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional, for some components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
