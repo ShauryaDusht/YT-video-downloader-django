@@ -23,7 +23,6 @@ A **Django-based web application** that allows users to download YouTube videos 
 
 ## 🚀 Installation
 
-
 ### 1️⃣ Clone the repository:
 ```
 git clone https://github.com/ShauryaDusht/YT-video-downloader-django/
@@ -48,6 +47,8 @@ python manage.py migrate
 python manage.py runserver  
 ```
 
+---
+
 ## 📖 Usage
 
 1. Open your web browser and navigate to [http://localhost:8000](http://localhost:8000).
@@ -56,6 +57,8 @@ python manage.py runserver
 4. Click the **"Download"** button.
 5. Wait for the processing to complete.
 6. Your video will be saved in the `downloads/merged` directory.
+
+---
 
 ## ⚠️ Limitations
 
